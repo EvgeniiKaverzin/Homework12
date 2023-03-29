@@ -1,7 +1,6 @@
 package Homework12;
 
 public class Book {
-
     private String nameBook;
     private int publishingYear;
     Author authorOfBook;

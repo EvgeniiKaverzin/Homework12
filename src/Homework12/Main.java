@@ -1,7 +1,6 @@
 package Homework12;
 
 public class Main {
-
     public static void main(String[] args) {
         Author authorNikolaev = new Author("Виктор","Николаев");
         Author authorPelevin = new Author("Виктор","Пелевин");
