@@ -13,7 +13,6 @@ public class Book {
     public String getNameBook() {
         return nameBook;
     }
-
     public int getPublishingYear() {
         return publishingYear;
     }

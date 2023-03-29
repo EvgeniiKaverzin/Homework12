@@ -12,6 +12,5 @@ public class Main {
         book1.setPublishingYear(2011);
         book1.printInfo();
 
-
     }
 }

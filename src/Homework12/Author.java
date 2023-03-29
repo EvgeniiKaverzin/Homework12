@@ -11,7 +11,6 @@ public class Author {
     public String getSurnameAuthor() {
         return surnameAuthor;
     }
-
     public String getFullName() {
         return nameAuthor+" "+surnameAuthor;
     }
