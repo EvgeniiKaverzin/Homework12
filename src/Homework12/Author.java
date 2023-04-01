@@ -22,7 +22,6 @@ public class Author {
         this.nameAuthor = nameAuthor;
         this.surnameAuthor = surnameAuthor;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
