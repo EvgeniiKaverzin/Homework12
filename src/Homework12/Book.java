@@ -3,15 +3,16 @@ package Homework12;
 import java.util.Objects;
 
 public class Book {
-    private final String nameBook;
-    private int publishingYear;
-    Author authorOfBook;
+    private final String title;
+    private final Author author;
+    private int yearOfPublishing;
 
     public Book(String nameBook, int publishingYear, Author authorOfBook) {
         this.nameBook = nameBook;
         this.publishingYear = publishingYear;
         this.authorOfBook = authorOfBook;
     }
+
     public String getNameBook() {
         return nameBook;
     }
