@@ -1,5 +1,3 @@
-package Homework12;
-
 import java.util.Objects;
 
 public class Book {
@@ -7,50 +5,43 @@ public class Book {
     private final Author author;
     private int yearOfPublishing;
 
-    public Book(String nameBook, int publishingYear, Author authorOfBook) {
-        this.nameBook = nameBook;
-        this.publishingYear = publishingYear;
-        this.authorOfBook = authorOfBook;
+    public Book(String title, Author author, int yearOfPublishing) {
+        this.title = title;
+        this.author = author;
+        this.yearOfPublishing = yearOfPublishing;
     }
 
-    public String getNameBook() {
-        return nameBook;
+    public String getTitle() {
+        return title;
     }
 
-    public int getPublishingYear() {
-        return publishingYear;
+    public String getAuthor() {
+        return author.getName();
     }
 
-    public void printInfo() {
-        System.out.println(getNameBook() + " " + getPublishingYear() + " " + authorOfBook.getFullName());
+    public int getYearOfPublishing() {
+        return yearOfPublishing;
     }
 
-    public void setPublishingYear(int publishingYear) {
-        if (publishingYear < 1950 || publishingYear > 2050) {
-            System.out.println("Invalid publishing year parameter: " + publishingYear);
-            return;
-        }
-        this.publishingYear = publishingYear;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return publishingYear == book.publishingYear && nameBook.equals(book.nameBook)
-                && Objects.equals(authorOfBook, book.authorOfBook);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(nameBook, publishingYear, authorOfBook);
+    public void setYearOfPublishing(int yearOfPublishing) {
+        this.yearOfPublishing = yearOfPublishing;
     }
 
     @Override
     public String toString() {
-        return nameBook + " " + publishingYear + " " + authorOfBook;
+        return author.toString() + getTitle() + " " + getYearOfPublishing();
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        Book book = (Book) other;
+        return yearOfPublishing == book.yearOfPublishing && Objects.equals(title, book.title) && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, yearOfPublishing, author);
     }
 }
-
-
