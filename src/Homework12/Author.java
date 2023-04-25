@@ -33,7 +33,6 @@ public class Author {//(̶◉͛‿◉̶).
     public int hashCode() {
         return Objects.hash(nameAuthor, surnameAuthor);
     }
-
     @Override
     public String toString() {
         return "Имя автора:" + surnameAuthor + " " + nameAuthor;
